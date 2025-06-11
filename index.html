@@ -593,21 +593,34 @@ INTERIOR <span class="fw-normal">DESIGNING TEAM</span></h2>
 	 </div>
 	</div>
 	<div class="col-md-6">
-	 <div class="connect_1r bg-white p-5">
-       <h4>Make Appointment</h4>
-	   <p>Leave your information here and get reply from our expert in 24 hours, don’t hesitate to ask.</p>
-	   <input class="form-control rounded-3" placeholder="Name" type="text">
-	   <input class="form-control rounded-3 mt-3" placeholder="Email" type="text">
-	   <select class="form-select rounded-3 mt-3" aria-label="Default select example">
-			<option selected="">Interested In</option>
-			<option value="1">Concept Designs</option>
-			<option value="2">Project Designs</option>
-			<option value="3">Make Overs</option>
-			<option value="4">Space Planning</option>
-			</select>
-			<h6 class="mb-0 mt-4"><a class="button rounded-3 d-block text-center" href="#">Submit Here <i class="fa fa-long-arrow-right ms-1"></i></a></h6>
-	 </div>
-	</div>
+  <div class="connect_1r bg-white p-5">
+    <h4>Make Appointment</h4>
+    <p>Leave your information here and get a reply from our expert in 24 hours, don’t hesitate to ask.</p>
+    
+    <!-- Start of working form -->
+    <form action="https://formspree.io/f/mdkzgnko" method="POST">
+      <input class="form-control rounded-3" placeholder="Name" type="text" name="name" required>
+
+      <input class="form-control rounded-3 mt-3" placeholder="Email" type="email" name="email" required>
+
+      <select class="form-select rounded-3 mt-3" name="interest" required>
+        <option value="">Interested In</option>
+        <option value="Concept Designs">Concept Designs</option>
+        <option value="Project Designs">Project Designs</option>
+        <option value="Make Overs">Make Overs</option>
+        <option value="Space Planning">Space Planning</option>
+      </select>
+
+      <textarea class="form-control rounded-3 mt-3" name="message" placeholder="Your message..." rows="4"></textarea>
+
+      <button type="submit" class="button rounded-3 d-block text-center mt-4 w-100">
+        Submit Here <i class="fa fa-long-arrow-right ms-1"></i>
+      </button>
+    </form>
+    <!-- End of working form -->
+    
+  </div>
+</div>
    </div>
  </div>
  </div>
@@ -819,6 +832,9 @@ design is dying…</a></h6>
   </div>
  </div>
 </section>
+
+<script src="appointment.js"></script>
+
 
 <script>
 window.onscroll = function() {myFunction()};
